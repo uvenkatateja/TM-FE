@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from "react";
 import "../App.css";
 import { FcGoogle } from "react-icons/fc";
-import axios from "axios";
+import axios from '../axiosConfig';
 import { useNavigate } from "react-router-dom";
 
 export default function Mainpage({ toast, signIn, user }) {
@@ -32,6 +32,7 @@ export default function Mainpage({ toast, signIn, user }) {
   }, []);
   
   axios.defaults.withCredentials = true;
+  axios.defaults.baseURL = 'https://tm-be.vercel.app';
   
   const handleLogin = useCallback((e) => {
     e.preventDefault();
