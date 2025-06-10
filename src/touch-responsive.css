@@ -1,0 +1,116 @@
+/* Touch-friendly styles for mobile devices */
+
+/* Increase touch target sizes */
+@media (pointer: coarse) {
+  /* Buttons and interactive elements */
+  button, 
+  .icon,
+  nav button,
+  .profile-div button,
+  .quote-footer button,
+  #add-bt,
+  #done-bt,
+  #task-remove,
+  .container .bt,
+  .mobile-toggle-button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Ensure there's enough spacing between touch targets */
+  .profile-div {
+    gap: 15px;
+  }
+
+  /* Add active state styles for touch feedback */
+  button:active,
+  .icon:active,
+  nav button:active,
+  .social-icons button:active,
+  #add-bt:active,
+  #done-bt:active {
+    opacity: 0.7;
+    transform: scale(0.97);
+  }
+
+  /* Increase spacing in forms */
+  .container input {
+    margin: 10px 0;
+    height: 44px;
+  }
+
+  /* Table rows need more height for touch */
+  table th, 
+  table td {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  /* Todo items and notes need to be easier to tap */
+  .todo-item,
+  .note {
+    padding: 12px;
+    margin-bottom: 8px;
+  }
+
+  /* Make scrolling smoother on touch devices */
+  .scroller,
+  .cur-task-list,
+  .completed-task,
+  .todo-list {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Add visible scrollbars on touch devices */
+  .cur-task-list::-webkit-scrollbar,
+  .completed-task::-webkit-scrollbar,
+  .todo-list::-webkit-scrollbar {
+    display: block;
+    width: 5px;
+  }
+
+  .cur-task-list::-webkit-scrollbar-thumb,
+  .completed-task::-webkit-scrollbar-thumb,
+  .todo-list::-webkit-scrollbar-thumb {
+    background-color: var(--nav);
+    border-radius: 5px;
+  }
+}
+
+/* Prevent text selection on tap for buttons and interactive elements */
+button, 
+.icon,
+nav button,
+.profile-div button,
+.quote-footer button,
+#add-bt,
+#done-bt,
+#task-remove,
+.container .bt,
+.mobile-toggle-button {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Fix for iOS input styling */
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 8px !important;
+}
+
+/* Fix for fixed positioning on iOS */
+.Toastify__toast-container {
+  position: fixed !important;
+  width: 90% !important;
+  left: 5% !important;
+}
+
+/* Make focused inputs more visible on mobile */
+input:focus,
+select:focus {
+  outline: 2px solid var(--nav) !important;
+} 

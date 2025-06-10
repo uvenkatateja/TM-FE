@@ -1,0 +1,95 @@
+/* Mobile-specific navbar styles */
+
+/* All mobile devices */
+@media only screen and (max-width: 768px) {
+  /* Ensure the navbar is at the top */
+  .main-home-container {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  nav.nav-left {
+    order: -1 !important; /* Force navbar to top */
+    position: sticky !important;
+    top: 10px !important;
+    z-index: 1000 !important;
+  }
+
+  /* Style the navbar as a horizontal bar */
+  .main-home-container nav.nav-left {
+    display: grid !important;
+    grid-template-columns: repeat(6, 1fr) !important;
+    width: calc(100% - 20px) !important;
+    height: auto !important;
+    min-height: 60px !important;
+    margin: 10px !important;
+    padding: 5px !important;
+    gap: 5px !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    border-radius: 10px !important;
+    flex-direction: row !important;
+  }
+
+  /* Style each button in the navbar */
+  .main-home-container nav.nav-left button {
+    width: 100% !important;
+    height: 45px !important;
+    border-radius: 8px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 0 !important;
+    background-color: transparent !important;
+  }
+
+  /* Add hover effect for feedback */
+  .main-home-container nav.nav-left button:hover {
+    background-color: rgba(0, 0, 0, 0.2) !important;
+    transform: scale(1.05) !important;
+  }
+
+  /* Make icons slightly larger for better visibility */
+  .main-home-container nav.nav-left button svg {
+    width: 24px !important;
+    height: 24px !important;
+  }
+
+  /* Logo styling */
+  .main-home-container nav.nav-left .todo-theme img {
+    width: 35px !important;
+    height: 35px !important;
+  }
+
+  /* Adjust main content and profile to fit below navbar */
+  .main-home-container .home-body-conatiner {
+    order: 0 !important;
+    margin-top: 5px !important;
+  }
+
+  .main-home-container .profile {
+    order: 1 !important;
+  }
+  
+  /* Ensure all navigation buttons are visible */
+  .main-home-container nav.nav-left button.todo-theme,
+  .main-home-container nav.nav-left button.nav-icon.skull {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
+
+/* Very small mobile devices */
+@media only screen and (max-width: 380px) {
+  .main-home-container nav.nav-left {
+    grid-template-columns: repeat(3, 1fr) !important;
+    grid-template-rows: repeat(2, 1fr) !important;
+    min-height: 100px !important;
+  }
+
+  .main-home-container nav.nav-left .todo-theme {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+  }
+} 

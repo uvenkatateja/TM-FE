@@ -1,0 +1,232 @@
+/* Responsive CSS for Task Management App */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  /* Main layout */
+  .main-home-container {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  /* Navbar */
+  nav.nav-left {
+    flex-direction: row;
+    width: calc(100% - 30px);
+    min-width: auto;
+    height: auto;
+    min-height: 70px;
+    margin: 15px 15px 0 15px;
+    padding: 10px;
+    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 5px;
+  }
+
+  /* Make all navbar buttons visible and properly sized */
+  nav button {
+    margin: 0;
+    width: 100%;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav .todo-theme {
+    grid-column: 1;
+  }
+
+  nav .nav-icon.skull {
+    margin: 0;
+  }
+
+  /* Home body container */
+  .home-body-conatiner {
+    margin: 10px 15px;
+    padding: 10px;
+    order: 1;
+  }
+
+  /* Profile section */
+  .profile {
+    width: calc(100% - 30px);
+    margin: 10px 15px 15px 15px;
+    order: 2;
+  }
+
+  /* Login/Register container */
+  .container {
+    min-height: 650px;
+    width: 90%;
+  }
+
+  .form-container {
+    width: 100%;
+  }
+
+  .sign-in {
+    width: 100%;
+  }
+
+  .sign-up {
+    width: 100%;
+  }
+
+  .toggle-container {
+    display: none;
+  }
+
+  /* Calendar */
+  .MuiCalendarPicker-root,
+  .MuiPickersDay-root {
+    font-size: 0.8rem;
+  }
+
+  /* Quote section */
+  .quote-div {
+    height: auto;
+    min-height: 150px;
+  }
+
+  .quote-div h3 {
+    font-size: 14px;
+  }
+
+  /* Search bar */
+  .search-bar {
+    flex-direction: column;
+    height: auto;
+    align-items: flex-start;
+  }
+
+  .search-bar h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .search-bar input {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  /* Dashboard layout */
+  .body-content {
+    flex-direction: column;
+  }
+
+  .notes, .todos, .stats {
+    width: 100% !important;
+    margin-bottom: 15px;
+  }
+
+  /* Task container */
+  #dash-task-con {
+    width: 100%;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px to 768px) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  /* Main layout */
+  .main-home-container {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  /* Navbar */
+  nav.nav-left {
+    flex-direction: row;
+    width: calc(100% - 30px);
+    min-width: auto;
+    height: 70px;
+    margin: 15px 15px 0 15px;
+    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 5px;
+  }
+
+  nav button {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Profile section */
+  .profile {
+    width: calc(100% - 30px);
+    margin: 10px 15px 15px 15px;
+  }
+
+  /* Dashboard layout */
+  .body-content {
+    flex-wrap: wrap;
+  }
+
+  .notes, .todos {
+    width: calc(50% - 10px) !important;
+  }
+
+  .stats {
+    width: 100% !important;
+    margin-top: 15px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px to 992px) */
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  /* Profile section */
+  .profile {
+    width: 40%;
+  }
+
+  /* Dashboard layout */
+  .notes, .todos, .stats {
+    width: calc(33.33% - 10px) !important;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 993px) {
+  /* No additional changes needed as the default layout works well for large screens */
+}
+
+/* Fixes for specific components */
+
+/* Fix for Login/Register on small screens */
+@media only screen and (max-width: 768px) {
+  .container.active .sign-up {
+    transform: none;
+  }
+
+  .container.active .sign-in {
+    transform: translateX(-100%);
+  }
+
+  .form-container form {
+    padding: 0 20px;
+  }
+
+  .social-icons button {
+    width: 60px;
+    height: 35px;
+  }
+}
+
+/* Fix for Calendar display on small screens */
+@media only screen and (max-width: 768px) {
+  .MuiStaticDatePicker-root {
+    max-width: 100%;
+  }
+  
+  .MuiCalendarPicker-root {
+    width: 100%;
+  }
+} 

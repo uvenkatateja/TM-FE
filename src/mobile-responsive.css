@@ -1,0 +1,300 @@
+/* Enhanced Mobile Responsive Styles */
+
+/* Extra small mobile devices (under 480px) */
+@media only screen and (max-width: 480px) {
+  /* Main layout */
+  body {
+    font-size: 14px;
+  }
+
+  .main-home-container {
+    padding: 0;
+  }
+
+  /* Navbar - make sure all buttons are visible */
+  nav {
+    margin: 8px;
+    min-height: 60px;
+    height: auto;
+    padding: 8px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+  }
+
+  nav button {
+    width: 40px;
+    height: 40px;
+    margin: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav img {
+    height: 25px;
+    width: 25px;
+  }
+
+  /* Ensure logo and logout are always visible */
+  nav :first-child {
+    margin-right: 0;
+  }
+
+  nav :last-child {
+    margin-left: 0;
+  }
+
+  /* If there are many nav buttons, make them wrap properly */
+  nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+    grid-gap: 5px;
+  }
+
+  /* Profile section */
+  .profile {
+    margin: 8px;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .profile-div {
+    gap: 10px;
+  }
+
+  #prof-img {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* Calendar */
+  .MuiCalendarPicker-root {
+    max-width: 100%;
+    font-size: 0.7rem !important;
+  }
+
+  .MuiPickersDay-root {
+    font-size: 0.7rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .PrivatePickersSlideTransition-root {
+    min-height: 200px !important;
+  }
+
+  /* Quote div / Email display */
+  .quote-div {
+    min-height: 120px;
+    padding: 10px;
+  }
+
+  .quote-div h3 {
+    font-size: 12px;
+  }
+
+  .quote-div h4 {
+    font-size: 11px;
+  }
+
+  /* Search bar */
+  .search-bar h1 {
+    font-size: 16px;
+  }
+
+  .search-bar input {
+    height: 35px;
+    font-size: 12px;
+  }
+
+  /* Task component */
+  .add-div input,
+  .add-div select {
+    height: 35px;
+    font-size: 12px;
+  }
+
+  #add-bt {
+    height: 35px;
+    font-size: 12px;
+  }
+
+  .task-body {
+    padding: 8px;
+  }
+
+  .task-body h3 {
+    font-size: 16px;
+  }
+
+  table th, 
+  table td {
+    padding: 6px 4px;
+    font-size: 11px;
+  }
+
+  /* Todo component */
+  .todo-body {
+    padding: 8px;
+  }
+
+  .todo-body h3 {
+    font-size: 16px;
+  }
+
+  .todo-item {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  /* Notes component */
+  .notes-body {
+    padding: 8px;
+  }
+
+  .notes-body h3 {
+    font-size: 16px;
+  }
+
+  .note {
+    padding: 8px;
+    font-size: 12px;
+    min-height: 100px;
+  }
+
+  /* Login/Register */
+  .container {
+    width: 95%;
+    min-height: 450px;
+  }
+
+  .container form {
+    padding: 0 15px;
+  }
+
+  .container input {
+    margin: 6px 0;
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .container .bt {
+    padding: 8px 25px;
+    font-size: 11px;
+  }
+
+  .social-icons button {
+    width: 50px;
+    height: 35px;
+  }
+
+  /* Toast notifications */
+  .Toastify__toast {
+    font-size: 12px;
+    min-height: 40px !important;
+    padding: 8px !important;
+  }
+
+  /* Dashboard content */
+  .body-content > div {
+    padding: 8px !important;
+  }
+
+  .con-head h3 {
+    font-size: 14px;
+  }
+
+  .con-head p {
+    font-size: 11px;
+  }
+
+  /* Scrollers and small content blocks */
+  .scroller {
+    padding: 8px;
+  }
+
+  .scroller-con {
+    padding: 6px;
+    font-size: 11px;
+  }
+}
+
+/* Small mobile devices (480px to 600px) */
+@media only screen and (min-width: 481px) and (max-width: 600px) {
+  /* Navbar - make sure all buttons are visible */
+  nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(45px, 1fr));
+    grid-gap: 5px;
+    height: auto;
+    min-height: 70px;
+    padding: 8px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav button {
+    margin: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Calendar */
+  .MuiCalendarPicker-root {
+    font-size: 0.8rem !important;
+  }
+
+  /* Font sizes */
+  .search-bar h1 {
+    font-size: 18px;
+  }
+
+  .task-body h3,
+  .todo-body h3,
+  .notes-body h3 {
+    font-size: 18px;
+  }
+
+  /* Login/Register */
+  .container input {
+    font-size: 13px;
+  }
+}
+
+/* Ensure navbar is visible on all mobile sizes */
+@media only screen and (max-width: 768px) {
+  .main-home-container {
+    flex-direction: column;
+  }
+
+  nav {
+    width: calc(100% - 16px);
+    min-width: 100%;
+    margin: 8px;
+    order: -1;
+    z-index: 10;
+  }
+
+  .home-body-conatiner {
+    margin: 8px;
+    width: calc(100% - 16px);
+  }
+
+  .profile {
+    width: calc(100% - 16px);
+    margin: 8px;
+  }
+
+  /* Ensure header titles are clearly visible */
+  .search-bar h1 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+} 

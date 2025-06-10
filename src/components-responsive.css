@@ -1,0 +1,142 @@
+/* Responsive styles for Task, Todo, and Notes components */
+
+/* Small screens (mobile phones) */
+@media only screen and (max-width: 768px) {
+  /* Task Component */
+  .add-div {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .add-div input,
+  .add-div select {
+    width: 100%;
+    border-radius: 15px;
+  }
+
+  #add-bt {
+    width: 100%;
+  }
+
+  .task-body {
+    padding: 10px;
+    height: auto;
+    min-height: 70vh;
+  }
+
+  .cur-task-list, 
+  .completed-task {
+    height: auto;
+    min-height: 200px;
+    max-height: 30vh;
+  }
+
+  table {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 0 10px;
+  }
+
+  table th, 
+  table td {
+    padding: 8px 5px;
+    font-size: 12px;
+  }
+
+  #done-bt {
+    width: 80%;
+    height: auto;
+    padding: 3px 0;
+  }
+
+  /* Todo Component */
+  .todo-div {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .todo-body {
+    padding: 10px;
+    height: auto;
+    min-height: 70vh;
+  }
+
+  .todo-list {
+    height: auto;
+    max-height: 50vh;
+  }
+
+  .todo-item {
+    padding: 10px;
+  }
+
+  /* Notes Component */
+  .notes-div {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .notes-body {
+    padding: 10px;
+    height: auto;
+    min-height: 70vh;
+  }
+
+  .notes-input {
+    width: 100%;
+  }
+
+  .notes-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .note {
+    width: 100%;
+  }
+}
+
+/* Medium screens (tablets) */
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  /* Task Component */
+  .add-div {
+    gap: 10px;
+  }
+
+  .add-div input,
+  .add-div select {
+    width: 100%;
+  }
+
+  #add-bt {
+    width: 30%;
+  }
+
+  /* Notes Component */
+  .notes-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+
+  .note {
+    width: 100%;
+  }
+}
+
+/* Larger screens (desktops) */
+@media only screen and (min-width: 993px) {
+  /* Notes Component */
+  .notes-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+
+  .note {
+    width: 100%;
+  }
+} 
