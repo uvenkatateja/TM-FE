@@ -10,7 +10,7 @@ export default function Mainpage({ toast, signIn, user }) {
   const navigate = useNavigate();
 
   const googleAuth = useCallback(() => {
-    window.open(`${process.env.REACT_APP_API_URL}/google`, "_self");
+    window.open(`https://tm-be.vercel.app/google`, "_self");
   }, []);
 
   const openForgotPass = useCallback(() => {
@@ -41,7 +41,7 @@ export default function Mainpage({ toast, signIn, user }) {
       return;
     }
     axios
-      .post(`${process.env.REACT_APP_API_URL}/login`, userLogin)
+      .post(`/login`, userLogin)
       .then((result) => {
         console.log(result);
         if (result.data.success) {
@@ -61,7 +61,7 @@ export default function Mainpage({ toast, signIn, user }) {
   const handleRegister = useCallback((e) => {
     e.preventDefault();
     axios
-      .post(`${process.env.REACT_APP_API_URL}/register`, users)
+      .post(`/register`, users)
       .then((result) => {
         console.log(result);
         if (result.data !== "Already Registerd") {
